@@ -12,7 +12,7 @@
 		<Name>Assyria Civilization</Name>
 		<Teaser>Adds the Assyria civilization, led by Tiglath-Pileser III.</Teaser>
 		<Description>Adds the Assyria civilization, led by Tiglath-Pileser III. Requires Rise and Fall or Gathering Storm.</Description>
-		<Authors>AUTHOR</Authors>
+		<Authors>Adversitas</Authors>
 		<AffectsSavedGames>1</AffectsSavedGames>
 		<CompatibleVersions>1.2,2.0</CompatibleVersions>
 	</Properties>
