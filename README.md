@@ -5,13 +5,15 @@ Schemas were verified against the installed game, and the gameplay database was 
 
 ## Kit
 
-| | Effect | How it's done |
-|---|---|---|
-| **Leader ability: Bel Pihati** | Governors establish in 1 turn | `Gameplay/Governors.sql`: he gets his own copy of each of the 7 governors (same names, portraits, promotions) with `TransitionStrength` 500. Each set is locked with `Governors.TraitType` (the mechanism Suleiman's Ibrahim uses): the copies need his trait, and the originals need a hidden trait given to every other major leader. The `GovernorReplaces` table is NOT used: the engine ignores it, and in testing it left both versions available (two Amanis). |
-| **Unique district: Ekal Masharti** | Replaces the Government Plaza; doesn't need population | `Gameplay/UniqueDistrict.sql` copies the Plaza and sets `RequiresPopulation = 0`. It keeps the Plaza's free governor title, loyalty, trade yields, buildings and the adjacency it gives other districts. |
-| **Unique unit: Kisir Sharruti** | Swordsman replacement: +3 Combat Strength (attack and defense) inside the borders of a city with a governor (any owner) | `Gameplay/UniqueUnit.xml` defines the ability. `Scripts/UniqueUnit.lua` switches it on/off as the unit moves, because no requirement can check the tile's city for a governor. Victor's Garrison Commander can't be reused: it's a built-in effect that only boosts that city's own defenders. |
-| **Civ ability: Yoke of Ashur** | Conquering a city grants a governor title (once per city; recapturing your own cities doesn't count). Conquered cities with an established governor get +10% to all yields. | Title: `Scripts/CivAbility.lua` (no data trigger fires on conquest). Yields: `Gameplay/Civilization.xml`. "Conquered" means "not with its original owner", so loyalty flips count for the yields. |
-| **Agenda: King of the Four Quarters** | Name and description only (no AI behaviour yet) | `Gameplay/Leader.xml` |
+**Civ ability: Yoke of Ashur.** Conquering a city grants a Governor Title. Conquered cities with an established Governor get +10% to all yields.
+
+**Leader ability: Bel Pihati.** Governors establish in 1 turn.
+
+**Unique unit: Kisir Sharruti.** Replaces the Swordsman. +3 Combat Strength within the borders of any city that has a Governor, whoever owns it.
+
+**Unique district: Ekal Masharti.** Replaces the Government Plaza and doesn't count toward the population requirement for districts.
+
+**Agenda: King of the Four Quarters.** Respects civilizations that govern their cities firmly.
 
 ## Names
 
