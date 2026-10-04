@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Icons. Generated art (art_src/make_art.py) lives in Textures/*.dds, one file per size,
+	loaded through <ImportFiles> in the modinfo (no ModBuddy cooking needed).
+	(The district has its own icon: aliasing the Government Plaza's failed on the setup screen,
+	where expansion icons aren't loaded yet.)
+-->
+<GameInfo>
+	<IconTextureAtlases>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="22" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ22.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="30" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ30.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="36" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ36.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="44" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ44.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="45" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ45.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="48" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ48.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ50.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="64" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ64.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="80" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ80.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_CIV" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Civ256.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="32" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader32.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="45" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader45.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader50.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="55" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader55.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="64" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader64.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="80" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader80.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_LEADER" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_Leader256.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="22" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU22.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="32" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU32.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="38" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU38.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU50.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="80" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU80.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU256.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="38" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait38.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait50.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="70" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait70.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="95" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait95.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="200" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait200.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UU_Portrait256.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="22" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD22.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="32" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD32.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="38" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD38.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD50.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="80" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD80.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="128" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD128.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD256.dds"/>
+		<Row Name="ICON_ATLAS_ASSYRIA_UD_FOW" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="Assyria_UD_FOW256.dds"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<Row Name="ICON_CIVILIZATION_ASSYRIA" Atlas="ICON_ATLAS_ASSYRIA_CIV" Index="0"/>
+		<Row Name="ICON_LEADER_TIGLATH_PILESER" Atlas="ICON_ATLAS_ASSYRIA_LEADER" Index="0"/>
+		<Row Name="ICON_UNIT_ASSYRIA_UU" Atlas="ICON_ATLAS_ASSYRIA_UU" Index="0"/>
+		<Row Name="ICON_UNIT_ASSYRIA_UU_PORTRAIT" Atlas="ICON_ATLAS_ASSYRIA_UU_PORTRAIT" Index="0"/>
+		<Row Name="ICON_DISTRICT_ASSYRIA_UD" Atlas="ICON_ATLAS_ASSYRIA_UD" Index="0"/>
+		<Row Name="ICON_DISTRICT_ASSYRIA_UD_FOW" Atlas="ICON_ATLAS_ASSYRIA_UD_FOW" Index="0"/>
+	</IconDefinitions>
+</GameInfo>

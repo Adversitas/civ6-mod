@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	The leader, their unique ability, and their agenda.
+	The ability's effect (governors establish in 1 turn) lives in Governors.sql: it has no modifier,
+	it works by giving this leader's trait its own set of fast-establishing replacement governors.
+	Agenda placeholder: name/description only, no AI behaviour yet.
+	(Agendas are NOT registered in Types; KIND_AGENDA doesn't exist.)
+-->
+<GameData>
+	<Types>
+		<Row Type="LEADER_TIGLATH_PILESER" Kind="KIND_LEADER"/>
+		<Row Type="TRAIT_LEADER_TIGLATH_PILESER_UA" Kind="KIND_TRAIT"/>
+	</Types>
+
+	<Leaders>
+		<Row LeaderType="LEADER_TIGLATH_PILESER" Name="LOC_LEADER_TIGLATH_PILESER_NAME" InheritFrom="LEADER_DEFAULT" SceneLayers="4"/>
+	</Leaders>
+
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_TIGLATH_PILESER" Quote="LOC_PEDIA_LEADERS_PAGE_LEADER_TIGLATH_PILESER_QUOTE"/>
+	</LeaderQuotes>
+
+	<LeaderTraits>
+		<Row LeaderType="LEADER_TIGLATH_PILESER" TraitType="TRAIT_LEADER_TIGLATH_PILESER_UA"/>
+	</LeaderTraits>
+
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_TIGLATH_PILESER_UA" Name="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_NAME" Description="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_DESCRIPTION"/>
+	</Traits>
+
+	<Agendas>
+		<Row AgendaType="AGENDA_TIGLATH_PILESER" Name="LOC_AGENDA_TIGLATH_PILESER_NAME" Description="LOC_AGENDA_TIGLATH_PILESER_DESCRIPTION"/>
+	</Agendas>
+
+	<!-- Loading screen art: loose .dds from Textures/, imported via <ImportFiles>.
+		No Dawn of Man narration exists for him, so the audio is switched off. -->
+	<LoadingInfo>
+		<Row LeaderType="LEADER_TIGLATH_PILESER" ForegroundImage="Assyria_Loading_Leader.dds" BackgroundImage="Assyria_Loading_Background.dds" PlayDawnOfManAudio="false"/>
+	</LoadingInfo>
+
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_TIGLATH_PILESER" AgendaType="AGENDA_TIGLATH_PILESER"/>
+	</HistoricalAgendas>
+</GameData>

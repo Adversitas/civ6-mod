@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Player colours (borders, flags, banners). Alt1-3 are used when another player already has the primary pair.
+	Named colours live in the base game's UI/Colors/Colors.xml; custom ones can be added via a <Colors> table.
+-->
+<GameData>
+	<PlayerColors>
+		<Row>
+			<Type>LEADER_TIGLATH_PILESER</Type>
+			<Usage>Unique</Usage>
+			<PrimaryColor>COLOR_STANDARD_BLUE_DK</PrimaryColor>
+			<SecondaryColor>COLOR_STANDARD_YELLOW_MD</SecondaryColor>
+			<Alt1PrimaryColor>COLOR_STANDARD_YELLOW_MD</Alt1PrimaryColor>
+			<Alt1SecondaryColor>COLOR_STANDARD_BLUE_DK</Alt1SecondaryColor>
+			<Alt2PrimaryColor>COLOR_STANDARD_BLUE_MD</Alt2PrimaryColor>
+			<Alt2SecondaryColor>COLOR_STANDARD_WHITE_LT</Alt2SecondaryColor>
+			<Alt3PrimaryColor>COLOR_STANDARD_WHITE_LT</Alt3PrimaryColor>
+			<Alt3SecondaryColor>COLOR_STANDARD_BLUE_DK</Alt3SecondaryColor>
+		</Row>
+	</PlayerColors>
+</GameData>

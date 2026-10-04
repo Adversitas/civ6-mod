@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Mod manifest. The game reads this to know which files to load and when.
+	FrontEndActions  = main menu / game setup screen (civ picker).
+	InGameActions    = the actual game.
+	Every file used anywhere must also be listed in <Files>.
+
+	The whole kit is built around governors, so gameplay only loads with Rise & Fall or Gathering Storm.
+-->
+<Mod id="49ccd7e1-b4de-4933-aea8-6a23b7e2a625" version="1">
+	<Properties>
+		<Name>Assyria Civilization</Name>
+		<Teaser>Adds the Assyria civilization, led by Tiglath-Pileser III.</Teaser>
+		<Description>Adds the Assyria civilization, led by Tiglath-Pileser III. Requires Rise and Fall or Gathering Storm.</Description>
+		<Authors>AUTHOR</Authors>
+		<AffectsSavedGames>1</AffectsSavedGames>
+		<CompatibleVersions>1.2,2.0</CompatibleVersions>
+	</Properties>
+
+	<ActionCriteria>
+		<Criteria id="ASSYRIA_Expansions" any="1">
+			<RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+		</Criteria>
+		<Criteria id="ASSYRIA_GatheringStorm">
+			<RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+		</Criteria>
+	</ActionCriteria>
+
+	<FrontEndActions>
+		<UpdateDatabase id="ASSYRIA_Config">
+			<File>Config/Config.xml</File>
+		</UpdateDatabase>
+		<UpdateText id="ASSYRIA_ConfigText">
+			<File>Text/Text_en_US.xml</File>
+		</UpdateText>
+		<UpdateIcons id="ASSYRIA_ConfigIcons">
+			<File>UI/Icons.xml</File>
+		</UpdateIcons>
+		<UpdateColors id="ASSYRIA_ConfigColors">
+			<File>UI/Colors.xml</File>
+		</UpdateColors>
+		<!-- Generated art (art_src/): icons + loading screen as loose .dds, unit model via .dep/artdef -->
+		<ImportFiles id="ASSYRIA_Textures_FrontEnd">
+			<Items>
+				<File>Textures/Assyria_Civ22.dds</File>
+				<File>Textures/Assyria_Civ256.dds</File>
+				<File>Textures/Assyria_Civ30.dds</File>
+				<File>Textures/Assyria_Civ36.dds</File>
+				<File>Textures/Assyria_Civ44.dds</File>
+				<File>Textures/Assyria_Civ45.dds</File>
+				<File>Textures/Assyria_Civ48.dds</File>
+				<File>Textures/Assyria_Civ50.dds</File>
+				<File>Textures/Assyria_Civ64.dds</File>
+				<File>Textures/Assyria_Civ80.dds</File>
+				<File>Textures/Assyria_Diplomacy_Leader.dds</File>
+				<File>Textures/Assyria_Leader256.dds</File>
+				<File>Textures/Assyria_Leader32.dds</File>
+				<File>Textures/Assyria_Leader45.dds</File>
+				<File>Textures/Assyria_Leader50.dds</File>
+				<File>Textures/Assyria_Leader55.dds</File>
+				<File>Textures/Assyria_Leader64.dds</File>
+				<File>Textures/Assyria_Leader80.dds</File>
+				<File>Textures/Assyria_Loading_Background.dds</File>
+				<File>Textures/Assyria_Loading_Leader.dds</File>
+				<File>Textures/Assyria_UD128.dds</File>
+				<File>Textures/Assyria_UD22.dds</File>
+				<File>Textures/Assyria_UD256.dds</File>
+				<File>Textures/Assyria_UD32.dds</File>
+				<File>Textures/Assyria_UD38.dds</File>
+				<File>Textures/Assyria_UD50.dds</File>
+				<File>Textures/Assyria_UD80.dds</File>
+				<File>Textures/Assyria_UD_FOW256.dds</File>
+				<File>Textures/Assyria_UU22.dds</File>
+				<File>Textures/Assyria_UU256.dds</File>
+				<File>Textures/Assyria_UU32.dds</File>
+				<File>Textures/Assyria_UU38.dds</File>
+				<File>Textures/Assyria_UU50.dds</File>
+				<File>Textures/Assyria_UU80.dds</File>
+				<File>Textures/Assyria_UU_Portrait200.dds</File>
+				<File>Textures/Assyria_UU_Portrait256.dds</File>
+				<File>Textures/Assyria_UU_Portrait38.dds</File>
+				<File>Textures/Assyria_UU_Portrait50.dds</File>
+				<File>Textures/Assyria_UU_Portrait70.dds</File>
+				<File>Textures/Assyria_UU_Portrait95.dds</File>
+			</Items>
+		</ImportFiles>
+		<UpdateArt id="ASSYRIA_Art_FrontEnd">
+			<File>Assyria.dep</File>
+		</UpdateArt>
+	</FrontEndActions>
+
+	<InGameActions>
+		<UpdateDatabase id="ASSYRIA_Gameplay" criteria="ASSYRIA_Expansions">
+			<Properties>
+				<LoadOrder>100</LoadOrder>
+			</Properties>
+			<File>Gameplay/Civilization.xml</File>
+			<File>Gameplay/Leader.xml</File>
+			<File>Gameplay/UniqueUnit.xml</File>
+		</UpdateDatabase>
+		<!-- These files COPY existing game rows (governors, Government Plaza, Swordsman iron cost), so they must
+			run after every other mod has finished changing those rows. BBG loads as late as 200000000; copying
+			before it once broke BBG (its UPDATEs hit our copied rows and aborted its governor file). -->
+		<UpdateDatabase id="ASSYRIA_GameplayLate" criteria="ASSYRIA_Expansions">
+			<Properties>
+				<LoadOrder>500000000</LoadOrder>
+			</Properties>
+			<File>Gameplay/Governors.sql</File>
+			<File>Gameplay/UniqueDistrict.sql</File>
+		</UpdateDatabase>
+		<UpdateDatabase id="ASSYRIA_GatheringStorm" criteria="ASSYRIA_GatheringStorm">
+			<Properties>
+				<LoadOrder>500000001</LoadOrder>
+			</Properties>
+			<File>Gameplay/Expansion2.sql</File>
+		</UpdateDatabase>
+		<UpdateText id="ASSYRIA_Text" criteria="ASSYRIA_Expansions">
+			<File>Text/Text_en_US.xml</File>
+		</UpdateText>
+		<UpdateIcons id="ASSYRIA_Icons" criteria="ASSYRIA_Expansions">
+			<File>UI/Icons.xml</File>
+		</UpdateIcons>
+		<UpdateColors id="ASSYRIA_Colors" criteria="ASSYRIA_Expansions">
+			<File>UI/Colors.xml</File>
+		</UpdateColors>
+		<AddGameplayScripts id="ASSYRIA_Scripts" criteria="ASSYRIA_Expansions">
+			<File>Scripts/UniqueUnit.lua</File>
+			<File>Scripts/CivAbility.lua</File>
+		<File>Scripts/Compatibility.lua</File>
+			<File>Scripts/Compatibility.lua</File>
+		</AddGameplayScripts>
+		<!-- Generated art (art_src/): icons + loading screen as loose .dds, unit model via .dep/artdef -->
+		<ImportFiles id="ASSYRIA_Textures" criteria="ASSYRIA_Expansions">
+			<Items>
+				<File>Textures/Assyria_Civ22.dds</File>
+				<File>Textures/Assyria_Civ256.dds</File>
+				<File>Textures/Assyria_Civ30.dds</File>
+				<File>Textures/Assyria_Civ36.dds</File>
+				<File>Textures/Assyria_Civ44.dds</File>
+				<File>Textures/Assyria_Civ45.dds</File>
+				<File>Textures/Assyria_Civ48.dds</File>
+				<File>Textures/Assyria_Civ50.dds</File>
+				<File>Textures/Assyria_Civ64.dds</File>
+				<File>Textures/Assyria_Civ80.dds</File>
+				<File>Textures/Assyria_Diplomacy_Leader.dds</File>
+				<File>Textures/Assyria_Leader256.dds</File>
+				<File>Textures/Assyria_Leader32.dds</File>
+				<File>Textures/Assyria_Leader45.dds</File>
+				<File>Textures/Assyria_Leader50.dds</File>
+				<File>Textures/Assyria_Leader55.dds</File>
+				<File>Textures/Assyria_Leader64.dds</File>
+				<File>Textures/Assyria_Leader80.dds</File>
+				<File>Textures/Assyria_Loading_Background.dds</File>
+				<File>Textures/Assyria_Loading_Leader.dds</File>
+				<File>Textures/Assyria_UD128.dds</File>
+				<File>Textures/Assyria_UD22.dds</File>
+				<File>Textures/Assyria_UD256.dds</File>
+				<File>Textures/Assyria_UD32.dds</File>
+				<File>Textures/Assyria_UD38.dds</File>
+				<File>Textures/Assyria_UD50.dds</File>
+				<File>Textures/Assyria_UD80.dds</File>
+				<File>Textures/Assyria_UD_FOW256.dds</File>
+				<File>Textures/Assyria_UU22.dds</File>
+				<File>Textures/Assyria_UU256.dds</File>
+				<File>Textures/Assyria_UU32.dds</File>
+				<File>Textures/Assyria_UU38.dds</File>
+				<File>Textures/Assyria_UU50.dds</File>
+				<File>Textures/Assyria_UU80.dds</File>
+				<File>Textures/Assyria_UU_Portrait200.dds</File>
+				<File>Textures/Assyria_UU_Portrait256.dds</File>
+				<File>Textures/Assyria_UU_Portrait38.dds</File>
+				<File>Textures/Assyria_UU_Portrait50.dds</File>
+				<File>Textures/Assyria_UU_Portrait70.dds</File>
+				<File>Textures/Assyria_UU_Portrait95.dds</File>
+			</Items>
+		</ImportFiles>
+		<UpdateArt id="ASSYRIA_Art" criteria="ASSYRIA_Expansions">
+			<File>Assyria.dep</File>
+		</UpdateArt>
+		<!-- Diplomacy-screen leader art (see UI/AssyriaDiplomacy.lua) -->
+		<AddUserInterfaces id="ASSYRIA_DiplomacyUI" criteria="ASSYRIA_Expansions">
+			<Properties>
+				<Context>InGame</Context>
+			</Properties>
+			<File>UI/AssyriaDiplomacy.xml</File>
+		</AddUserInterfaces>
+	</InGameActions>
+
+	<Files>
+		<File>Config/Config.xml</File>
+		<File>Gameplay/Civilization.xml</File>
+		<File>Gameplay/Leader.xml</File>
+		<File>Gameplay/Governors.sql</File>
+		<File>Gameplay/UniqueUnit.xml</File>
+		<File>Gameplay/UniqueDistrict.sql</File>
+		<File>Gameplay/Expansion2.sql</File>
+		<File>Scripts/UniqueUnit.lua</File>
+		<File>Scripts/CivAbility.lua</File>
+		<File>Text/Text_en_US.xml</File>
+		<File>UI/Icons.xml</File>
+		<File>UI/Colors.xml</File>
+		<File>Assyria.dep</File>
+		<File>ArtDefs/Units.artdef</File>
+		<File>UI/AssyriaDiplomacy.xml</File>
+		<File>UI/AssyriaDiplomacy.lua</File>
+		<File>Textures/Assyria_Civ22.dds</File>
+		<File>Textures/Assyria_Civ256.dds</File>
+		<File>Textures/Assyria_Civ30.dds</File>
+		<File>Textures/Assyria_Civ36.dds</File>
+		<File>Textures/Assyria_Civ44.dds</File>
+		<File>Textures/Assyria_Civ45.dds</File>
+		<File>Textures/Assyria_Civ48.dds</File>
+		<File>Textures/Assyria_Civ50.dds</File>
+		<File>Textures/Assyria_Civ64.dds</File>
+		<File>Textures/Assyria_Civ80.dds</File>
+		<File>Textures/Assyria_Diplomacy_Leader.dds</File>
+		<File>Textures/Assyria_Leader256.dds</File>
+		<File>Textures/Assyria_Leader32.dds</File>
+		<File>Textures/Assyria_Leader45.dds</File>
+		<File>Textures/Assyria_Leader50.dds</File>
+		<File>Textures/Assyria_Leader55.dds</File>
+		<File>Textures/Assyria_Leader64.dds</File>
+		<File>Textures/Assyria_Leader80.dds</File>
+		<File>Textures/Assyria_Loading_Background.dds</File>
+		<File>Textures/Assyria_Loading_Leader.dds</File>
+		<File>Textures/Assyria_UD128.dds</File>
+		<File>Textures/Assyria_UD22.dds</File>
+		<File>Textures/Assyria_UD256.dds</File>
+		<File>Textures/Assyria_UD32.dds</File>
+		<File>Textures/Assyria_UD38.dds</File>
+		<File>Textures/Assyria_UD50.dds</File>
+		<File>Textures/Assyria_UD80.dds</File>
+		<File>Textures/Assyria_UD_FOW256.dds</File>
+		<File>Textures/Assyria_UU22.dds</File>
+		<File>Textures/Assyria_UU256.dds</File>
+		<File>Textures/Assyria_UU32.dds</File>
+		<File>Textures/Assyria_UU38.dds</File>
+		<File>Textures/Assyria_UU50.dds</File>
+		<File>Textures/Assyria_UU80.dds</File>
+		<File>Textures/Assyria_UU_Portrait200.dds</File>
+		<File>Textures/Assyria_UU_Portrait256.dds</File>
+		<File>Textures/Assyria_UU_Portrait38.dds</File>
+		<File>Textures/Assyria_UU_Portrait50.dds</File>
+		<File>Textures/Assyria_UU_Portrait70.dds</File>
+		<File>Textures/Assyria_UU_Portrait95.dds</File>
+	</Files>
+</Mod>

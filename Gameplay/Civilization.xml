@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Assyria (Neo-Assyrian Empire) + its unique ability, Yoke of Ashur.
+-->
+<GameData>
+	<Types>
+		<Row Type="CIVILIZATION_ASSYRIA" Kind="KIND_CIVILIZATION"/>
+		<Row Type="TRAIT_CIVILIZATION_ASSYRIA_UA" Kind="KIND_TRAIT"/>
+	</Types>
+
+	<Civilizations>
+		<!-- Ethnicity controls city/unit art style: ETHNICITY_MEDIT, ETHNICITY_EURO, ETHNICITY_AFRICAN, ETHNICITY_ASIAN, ETHNICITY_SOUTHAM -->
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Name="LOC_CIVILIZATION_ASSYRIA_NAME" Description="LOC_CIVILIZATION_ASSYRIA_DESCRIPTION" Adjective="LOC_CIVILIZATION_ASSYRIA_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="10" Ethnicity="ETHNICITY_MEDIT"/>
+	</Civilizations>
+
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER" CapitalName="LOC_CITY_NAME_ASSYRIA_1"/>
+	</CivilizationLeaders>
+
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" TraitType="TRAIT_CIVILIZATION_UNIT_ASSYRIA_UU"/>
+		<!-- the unique district's trait is added in UniqueDistrict.sql -->
+	</CivilizationTraits>
+
+	<!-- Pedia sidebar facts -->
+	<CivilizationInfo>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Header="LOC_CIVINFO_LOCATION" Caption="LOC_CIVINFO_ASSYRIA_LOCATION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Header="LOC_CIVINFO_SIZE" Caption="LOC_CIVINFO_ASSYRIA_SIZE" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Header="LOC_CIVINFO_POPULATION" Caption="LOC_CIVINFO_ASSYRIA_POPULATION" SortIndex="30"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Header="LOC_CIVINFO_CAPITAL" Caption="LOC_CIVINFO_ASSYRIA_CAPITAL" SortIndex="40"/>
+	</CivilizationInfo>
+
+	<!-- First entry is the capital (Kalhu, Tiglath-Pileser III's seat). Names live in Text_en_US.xml -->
+	<CityNames>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_1"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_2"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_3"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_4"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_5"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_6"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_7"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_8"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_9"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_10"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_11"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_12"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_13"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_14"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CityName="LOC_CITY_NAME_ASSYRIA_15"/>
+	</CityNames>
+
+	<CivilizationCitizenNames>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_MALE_1"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_MALE_2"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_MALE_3"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_FEMALE_1" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_FEMALE_2" Female="true"/>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" CitizenName="LOC_CITIZEN_ASSYRIA_FEMALE_3" Female="true"/>
+	</CivilizationCitizenNames>
+
+	<!-- The Tigris heartland -->
+	<StartBiasRivers>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Tier="4"/>
+	</StartBiasRivers>
+
+	<!-- Optional start bias (lower Tier = stronger). Examples: -->
+	<!--
+	<StartBiasTerrains>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" TerrainType="TERRAIN_COAST" Tier="3"/>
+	</StartBiasTerrains>
+	<StartBiasRivers>
+		<Row CivilizationType="CIVILIZATION_ASSYRIA" Tier="5"/>
+	</StartBiasRivers>
+	-->
+
+	<!-- ===== Unique ability =====
+		1. Conquering a city grants a governor title  -> Scripts/CivAbility.lua (no data-side trigger exists)
+		2. Conquered cities with an established governor get +10% to all yields -> below
+		"Conquered" = not with its original owner, so cities gained by loyalty flip or trade count too.
+		One modifier per yield: no official example shows a yield list working with the percent modifier.
+	-->
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" Name="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_NAME" Description="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_DESCRIPTION"/>
+	</Traits>
+
+	<TraitModifiers>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_FOOD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_PRODUCTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_GOLD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_SCIENCE"/>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_CULTURE"/>
+		<Row TraitType="TRAIT_CIVILIZATION_ASSYRIA_UA" ModifierId="ASSYRIA_UA_FAITH"/>
+	</TraitModifiers>
+
+	<Modifiers>
+		<Row ModifierId="ASSYRIA_UA_FOOD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+		<Row ModifierId="ASSYRIA_UA_PRODUCTION" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+		<Row ModifierId="ASSYRIA_UA_GOLD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+		<Row ModifierId="ASSYRIA_UA_SCIENCE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+		<Row ModifierId="ASSYRIA_UA_CULTURE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+		<Row ModifierId="ASSYRIA_UA_FAITH" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER" SubjectRequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY"/>
+	</Modifiers>
+
+	<ModifierArguments>
+		<Row ModifierId="ASSYRIA_UA_FOOD" Name="YieldType" Value="YIELD_FOOD"/>
+		<Row ModifierId="ASSYRIA_UA_FOOD" Name="Amount" Value="10"/>
+		<Row ModifierId="ASSYRIA_UA_PRODUCTION" Name="YieldType" Value="YIELD_PRODUCTION"/>
+		<Row ModifierId="ASSYRIA_UA_PRODUCTION" Name="Amount" Value="10"/>
+		<Row ModifierId="ASSYRIA_UA_GOLD" Name="YieldType" Value="YIELD_GOLD"/>
+		<Row ModifierId="ASSYRIA_UA_GOLD" Name="Amount" Value="10"/>
+		<Row ModifierId="ASSYRIA_UA_SCIENCE" Name="YieldType" Value="YIELD_SCIENCE"/>
+		<Row ModifierId="ASSYRIA_UA_SCIENCE" Name="Amount" Value="10"/>
+		<Row ModifierId="ASSYRIA_UA_CULTURE" Name="YieldType" Value="YIELD_CULTURE"/>
+		<Row ModifierId="ASSYRIA_UA_CULTURE" Name="Amount" Value="10"/>
+		<Row ModifierId="ASSYRIA_UA_FAITH" Name="YieldType" Value="YIELD_FAITH"/>
+		<Row ModifierId="ASSYRIA_UA_FAITH" Name="Amount" Value="10"/>
+	</ModifierArguments>
+
+	<RequirementSets>
+		<Row RequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+
+	<RequirementSetRequirements>
+		<Row RequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY" RequirementId="ASSYRIA_REQ_CITY_NOT_ORIGINAL_OWNER"/>
+		<Row RequirementSetId="ASSYRIA_CONQUERED_GOVERNED_CITY" RequirementId="ASSYRIA_REQ_CITY_HAS_ESTABLISHED_GOVERNOR"/>
+	</RequirementSetRequirements>
+
+	<Requirements>
+		<Row RequirementId="ASSYRIA_REQ_CITY_NOT_ORIGINAL_OWNER" RequirementType="REQUIREMENT_CITY_IS_ORIGINAL_OWNER" Inverse="true"/>
+		<Row RequirementId="ASSYRIA_REQ_CITY_HAS_ESTABLISHED_GOVERNOR" RequirementType="REQUIREMENT_CITY_HAS_GOVERNOR"/>
+	</Requirements>
+
+	<RequirementArguments>
+		<Row RequirementId="ASSYRIA_REQ_CITY_HAS_ESTABLISHED_GOVERNOR" Name="Established" Value="true"/>
+	</RequirementArguments>
+</GameData>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Front-end data: what shows up on the civ/leader picker before the game starts.
+	One Players row per ruleset. Only Rise & Fall and Gathering Storm: the kit needs governors,
+	so the civ is deliberately absent from the base-game picker.
+	PlayerItems = the unique unit/district icons shown on the picker card.
+-->
+<GameInfo>
+	<Players>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER"
+			CivilizationName="LOC_CIVILIZATION_ASSYRIA_NAME" CivilizationIcon="ICON_CIVILIZATION_ASSYRIA"
+			LeaderName="LOC_LEADER_TIGLATH_PILESER_NAME" LeaderIcon="ICON_LEADER_TIGLATH_PILESER"
+			CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_ASSYRIA"
+			LeaderAbilityName="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_TIGLATH_PILESER"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER"
+			CivilizationName="LOC_CIVILIZATION_ASSYRIA_NAME" CivilizationIcon="ICON_CIVILIZATION_ASSYRIA"
+			LeaderName="LOC_LEADER_TIGLATH_PILESER_NAME" LeaderIcon="ICON_LEADER_TIGLATH_PILESER"
+			CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_NAME" CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_DESCRIPTION" CivilizationAbilityIcon="ICON_CIVILIZATION_ASSYRIA"
+			LeaderAbilityName="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_NAME" LeaderAbilityDescription="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_DESCRIPTION" LeaderAbilityIcon="ICON_LEADER_TIGLATH_PILESER"/>
+	</Players>
+
+	<PlayerItems>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER" Type="UNIT_ASSYRIA_UU" Icon="ICON_UNIT_ASSYRIA_UU" Name="LOC_UNIT_ASSYRIA_UU_NAME" Description="LOC_UNIT_ASSYRIA_UU_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion1_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER" Type="DISTRICT_ASSYRIA_UD" Icon="ICON_DISTRICT_ASSYRIA_UD" Name="LOC_DISTRICT_ASSYRIA_UD_NAME" Description="LOC_DISTRICT_ASSYRIA_UD_DESCRIPTION" SortIndex="20"/>
+
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER" Type="UNIT_ASSYRIA_UU" Icon="ICON_UNIT_ASSYRIA_UU" Name="LOC_UNIT_ASSYRIA_UU_NAME" Description="LOC_UNIT_ASSYRIA_UU_DESCRIPTION" SortIndex="10"/>
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_ASSYRIA" LeaderType="LEADER_TIGLATH_PILESER" Type="DISTRICT_ASSYRIA_UD" Icon="ICON_DISTRICT_ASSYRIA_UD" Name="LOC_DISTRICT_ASSYRIA_UD_NAME" Description="LOC_DISTRICT_ASSYRIA_UD_DESCRIPTION" SortIndex="20"/>
+	</PlayerItems>
+</GameInfo>

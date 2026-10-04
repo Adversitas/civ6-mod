@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All player-facing strings. Every LOC_ key used in the other files is defined here. -->
+<GameData>
+	<LocalizedText>
+		<!-- Civilization -->
+		<Replace Tag="LOC_CIVILIZATION_ASSYRIA_NAME" Language="en_US"><Text>Assyria</Text></Replace>
+		<Replace Tag="LOC_CIVILIZATION_ASSYRIA_DESCRIPTION" Language="en_US"><Text>Assyrian Empire</Text></Replace>
+		<Replace Tag="LOC_CIVILIZATION_ASSYRIA_ADJECTIVE" Language="en_US"><Text>Assyrian</Text></Replace>
+
+		<!-- Civ ability -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_NAME" Language="en_US"><Text>Yoke of Ashur</Text></Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_ASSYRIA_UA_DESCRIPTION" Language="en_US"><Text>Conquering a city grants a [ICON_Governor] Governor Title (once per city). Cities not originally founded by you get +10% to all yields while they have an established [ICON_Governor] Governor.</Text></Replace>
+
+		<Replace Tag="LOC_CIVINFO_ASSYRIA_LOCATION" Language="en_US"><Text>Northern Mesopotamia</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_ASSYRIA_SIZE" Language="en_US"><Text>About 1.4 million square kilometers at its height (7th century BCE)</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_ASSYRIA_POPULATION" Language="en_US"><Text>Unknown; several million at its height</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_ASSYRIA_CAPITAL" Language="en_US"><Text>Ashur, then Kalhu (Nimrud), Dur-Sharrukin and Nineveh</Text></Replace>
+
+		<!-- Cities (first = capital) -->
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_1" Language="en_US"><Text>Kalhu</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_2" Language="en_US"><Text>Ashur</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_3" Language="en_US"><Text>Nineveh</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_4" Language="en_US"><Text>Arbela</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_5" Language="en_US"><Text>Harran</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_6" Language="en_US"><Text>Dur-Sharrukin</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_7" Language="en_US"><Text>Arrapha</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_8" Language="en_US"><Text>Tarbisu</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_9" Language="en_US"><Text>Guzana</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_10" Language="en_US"><Text>Til Barsip</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_11" Language="en_US"><Text>Imgur-Enlil</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_12" Language="en_US"><Text>Kilizi</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_13" Language="en_US"><Text>Tushhan</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_14" Language="en_US"><Text>Dur-Katlimmu</Text></Replace>
+		<Replace Tag="LOC_CITY_NAME_ASSYRIA_15" Language="en_US"><Text>Shibaniba</Text></Replace>
+
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_MALE_1" Language="en_US"><Text>Ashur-iddin</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_MALE_2" Language="en_US"><Text>Nabu-nadin-ahi</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_MALE_3" Language="en_US"><Text>Sin-ahhe-eriba</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_FEMALE_1" Language="en_US"><Text>Yaba</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_FEMALE_2" Language="en_US"><Text>Banitu</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_ASSYRIA_FEMALE_3" Language="en_US"><Text>Naqia</Text></Replace>
+
+		<!-- Leader -->
+		<Replace Tag="LOC_LEADER_TIGLATH_PILESER_NAME" Language="en_US"><Text>Tiglath-Pileser III</Text></Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_TIGLATH_PILESER_QUOTE" Language="en_US"><Text>"I placed my officials over them as governors, and laid the yoke of Ashur upon them."</Text></Replace>
+
+		<Replace Tag="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_NAME" Language="en_US"><Text>Bel Pihati</Text></Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_TIGLATH_PILESER_UA_DESCRIPTION" Language="en_US"><Text>[ICON_Governor] Governors establish in 1 turn.</Text></Replace>
+
+		<Replace Tag="LOC_AGENDA_TIGLATH_PILESER_NAME" Language="en_US"><Text>King of the Four Quarters</Text></Replace>
+		<Replace Tag="LOC_AGENDA_TIGLATH_PILESER_DESCRIPTION" Language="en_US"><Text>Respects civilizations that govern their cities firmly. Holds those who leave their cities ungoverned in contempt.</Text></Replace>
+
+		<!-- Unique unit -->
+		<Replace Tag="LOC_UNIT_ASSYRIA_UU_NAME" Language="en_US"><Text>Kisir Sharruti</Text></Replace>
+		<Replace Tag="LOC_UNIT_ASSYRIA_UU_DESCRIPTION" Language="en_US"><Text>Assyrian unique Classical era melee unit that replaces the Swordsman. +3 [ICON_Strength] Combat Strength within the borders of a city that has a [ICON_Governor] Governor, whoever owns it.</Text></Replace>
+		<Replace Tag="LOC_ABILITY_ASSYRIA_UU_GOVERNED_NAME" Language="en_US"><Text>Provincial Army</Text></Replace>
+		<Replace Tag="LOC_ABILITY_ASSYRIA_UU_GOVERNED_DESCRIPTION" Language="en_US"><Text>+3 [ICON_Strength] Combat Strength within the borders of a city that has a [ICON_Governor] Governor.</Text></Replace>
+		<Replace Tag="LOC_ABILITY_ASSYRIA_UU_GOVERNED_PREVIEW" Language="en_US"><Text>+3 [ICON_Strength] Combat Strength in governed territory</Text></Replace>
+
+		<!-- Unique district -->
+		<Replace Tag="LOC_DISTRICT_ASSYRIA_UD_NAME" Language="en_US"><Text>Ekal Masharti</Text></Replace>
+		<Replace Tag="LOC_DISTRICT_ASSYRIA_UD_DESCRIPTION" Language="en_US"><Text>A district unique to Assyria that replaces the Government Plaza. Does not count toward the population requirement for districts.</Text></Replace>
+	</LocalizedText>
+</GameData>

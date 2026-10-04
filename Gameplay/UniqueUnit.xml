@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Unique unit: Swordsman replacement (base Swordsman stats for now).
+	+3 Combat Strength (attacking and defending) inside the borders of any city (any owner) that has a governor.
+
+	No requirement can check "the city owning this tile has a governor", so Scripts/UniqueUnit.lua
+	switches ABILITY_ASSYRIA_UU_GOVERNED on and off as units move and governors come and go.
+	(Victor's Garrison Commander can't be reused: it's a hardcoded city effect for that city's defenders.)
+
+	NOTE: a brand-new unit type has no 3D model until it gets a Units.artdef entry (see README).
+-->
+<GameData>
+	<Types>
+		<Row Type="UNIT_ASSYRIA_UU" Kind="KIND_UNIT"/>
+		<Row Type="TRAIT_CIVILIZATION_UNIT_ASSYRIA_UU" Kind="KIND_TRAIT"/>
+		<Row Type="ABILITY_ASSYRIA_UU_GOVERNED" Kind="KIND_ABILITY"/>
+	</Types>
+
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_ASSYRIA_UU" Name="LOC_UNIT_ASSYRIA_UU_NAME"/>
+	</Traits>
+
+	<Units>
+		<Row UnitType="UNIT_ASSYRIA_UU" Name="LOC_UNIT_ASSYRIA_UU_NAME" Description="LOC_UNIT_ASSYRIA_UU_DESCRIPTION"
+			TraitType="TRAIT_CIVILIZATION_UNIT_ASSYRIA_UU"
+			Cost="90" Maintenance="2" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="35"
+			StrategicResource="RESOURCE_IRON" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST"
+			PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS" PrereqTech="TECH_IRON_WORKING"/>
+	</Units>
+
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_ASSYRIA_UU" ReplacesUnitType="UNIT_SWORDSMAN"/>
+	</UnitReplaces>
+
+	<UnitUpgrades>
+		<Row Unit="UNIT_ASSYRIA_UU" UpgradeUnit="UNIT_MAN_AT_ARMS"/>
+	</UnitUpgrades>
+
+	<UnitAiInfos>
+		<Row UnitType="UNIT_ASSYRIA_UU" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_ASSYRIA_UU" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_ASSYRIA_UU" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_ASSYRIA_UU" AiType="UNITTYPE_LAND_COMBAT"/>
+	</UnitAiInfos>
+
+	<!-- ===== Governed-territory ability ===== -->
+	<Tags>
+		<Row Tag="CLASS_ASSYRIA_UU" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+
+	<TypeTags>
+		<Row Type="UNIT_ASSYRIA_UU" Tag="CLASS_MELEE"/>
+		<Row Type="UNIT_ASSYRIA_UU" Tag="CLASS_ASSYRIA_UU"/>
+		<Row Type="ABILITY_ASSYRIA_UU_GOVERNED" Tag="CLASS_ASSYRIA_UU"/>
+	</TypeTags>
+
+	<!-- Inactive = only granted by script, never automatically -->
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_ASSYRIA_UU_GOVERNED" Name="LOC_ABILITY_ASSYRIA_UU_GOVERNED_NAME" Description="LOC_ABILITY_ASSYRIA_UU_GOVERNED_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+
+	<UnitAbilityModifiers>
+		<Row UnitAbilityType="ABILITY_ASSYRIA_UU_GOVERNED" ModifierId="ASSYRIA_UU_GOVERNED_STRENGTH"/>
+	</UnitAbilityModifiers>
+
+	<!-- Applies attacking and defending; the script decides when the ability is on -->
+	<Modifiers>
+		<Row ModifierId="ASSYRIA_UU_GOVERNED_STRENGTH" ModifierType="MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH"/>
+	</Modifiers>
+
+	<ModifierArguments>
+		<Row ModifierId="ASSYRIA_UU_GOVERNED_STRENGTH" Name="Amount" Value="3"/>
+	</ModifierArguments>
+
+	<!-- Shows "+3 ..." in the combat preview -->
+	<ModifierStrings>
+		<Row ModifierId="ASSYRIA_UU_GOVERNED_STRENGTH" Context="Preview" Text="LOC_ABILITY_ASSYRIA_UU_GOVERNED_PREVIEW"/>
+	</ModifierStrings>
+</GameData>
